@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000
 
 //CORS Configuration
 const allowedOrigins = [
+  "https://zephir-accenture.vercel.app/",
   "https://v0-zephir.vercel.app/",
   "http://localhost:3000", 
   "http://localhost:8080"

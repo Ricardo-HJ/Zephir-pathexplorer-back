@@ -3,6 +3,7 @@ import cors from "cors"
 import dotenv from "dotenv"
 import userRoutes from "./routes/userRoutes"
 import testRoutes from "./routes/testRoutes"
+import { version } from "os"
 
 dotenv.config()
 
@@ -17,6 +18,16 @@ const allowedOrigins = [
   "http://localhost:8080"
 ]
 
+app.get("/", (req, res) => {
+  res.json({
+    message: 'Pathexplorer API is Running',
+    version: '1.0.0',
+    endpoints: [
+      '/api/users',
+      '/api/test'
+    ]
+  });
+});
 
 // Middleware
 app.use(cors({

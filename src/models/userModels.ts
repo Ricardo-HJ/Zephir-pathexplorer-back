@@ -12,7 +12,7 @@ export class UserModel {
 
     // Insert user into database
     const { data, error } = await supabase
-      .from("usuarios")
+      .from("usuario")
       .insert([
         {
           tipoUsuario: userData.tipoUsuario,
@@ -33,7 +33,7 @@ export class UserModel {
    * Find a user by email
    */
   static async findByEmail(email: string): Promise<User | null> {
-    const { data, error } = await supabase.from("usuarios").select("*").eq("correo", email).single()
+    const { data, error } = await supabase.from("usuario").select("*").eq("correo", email).single()
 
     if (error) {
       if (error.code === "PGRST116") {
@@ -51,7 +51,7 @@ export class UserModel {
    */
   static async findById(id: string): Promise<User | null> {
     const { data, error } = await supabase
-      .from("usuarios")
+      .from("usuario")
       .select("idUsuario, tipoUsuario, correo, created_at")
       .eq("idUsuario", id)
       .single()
@@ -75,7 +75,7 @@ export class UserModel {
       userData.contraseña = await bcrypt.hash(userData.contraseña, 10)
     }
 
-    const { data, error } = await supabase.from("usuarios").update(userData).eq("idUsuario", id).select()
+    const { data, error } = await supabase.from("usuario").update(userData).eq("idUsuario", id).select()
 
     if (error) {
       throw new Error(`Error updating user: ${error.message}`)
@@ -88,7 +88,7 @@ export class UserModel {
    * Delete a user
    */
   static async delete(id: string): Promise<void> {
-    const { error } = await supabase.from("usuarios").delete().eq("idUsuario", id)
+    const { error } = await supabase.from("usuario").delete().eq("idUsuario", id)
 
     if (error) {
       throw new Error(`Error deleting user: ${error.message}`)

@@ -10,5 +10,6 @@ router.post('/login', loginUser);
 
 // Protected routes
 router.get('/profile', authenticateToken, getUserProfile);
+router.get('/intereses', authenticateToken, getUserProfile);
 
 export default router;

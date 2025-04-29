@@ -1,3 +1,10 @@
+
+// en este archivo debe de ir una función de validación genérica para
+// usarla en el middleware de validación de los datos
+
+
+
+
 /**
  * Validate user input for registration
  */

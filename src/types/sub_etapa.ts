@@ -1,15 +1,15 @@
 export interface SubEtapa {
-    id_subetapa: number;
+    idSubetapa: number;
+    created_at?: string;
     nombre: string;
     descripcion: string;
     usuario_id: string;
     id_etapa: number;
-    created_at?: string;
 }
 
 export interface SubEtapaInput {
     nombre: string;
     descripcion: string;
     usuario_id: string;
-    idEtapa: number;
+    id_etapa: number;
 }

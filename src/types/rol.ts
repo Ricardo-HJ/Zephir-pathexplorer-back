@@ -1,8 +1,8 @@
 export interface Rol {
     id_rol: number;
-    nombre: string;
     created_at?: string;
     updated_at?: string;
+    nombre: string;
   }
   
   export interface RolInput {

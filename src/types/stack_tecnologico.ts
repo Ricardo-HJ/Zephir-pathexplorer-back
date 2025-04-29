@@ -1,13 +1,13 @@
 export interface StackTecnologico {
-    id_stack_tecnologico: number;
-    id_usuario_proyecyo: number;
+    id: number;
+    created_at?: string;
     nombre: string;
     categoria: string;
-    created_at?: string;
+    id_usuario_proyecto: number;
   }
   
 export interface StackTecnologicoInput {
-    id_usuario_proyecyo: number;
     nombre: string;
     categoria: string;
+    id_usuario_proyecto: number;
   }

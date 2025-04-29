@@ -1,16 +1,17 @@
 export interface Etapa{
-    id_etapa: number;
-    numero: string;
+    idEtapa: number;
+    created_at?: string;
     titulo: string;
     descripcion: string;
-    id_path_carrera: number;
+    numero: string;
     usuario_id: string;
+    id_path_carrera: number;
 }
 
 export interface EtapaInput{
-    numero: string;
     titulo: string;
     descripcion: string;
-    id_path_carrera: number;
+    numero: string;
     usuario_id: string;
+    id_path_carrera: number;
 }

@@ -1,7 +1,7 @@
 export interface Interes {
-    id_interes: number;
-    usuario_id: string;
+    id: number;
     nombre: string;
+    usuario_id: string;
   }
   
   export interface InteresInput {

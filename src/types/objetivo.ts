@@ -1,8 +1,8 @@
 export interface Objetivo {
-    id_objetivo: number;
-    usuario_id: string;
-    objetivo: string;
+    id: number;
     created_at?: string;
+    objetivo: string;
+    usuario_id: string;
   }
   
   export interface ObjetivoInput {

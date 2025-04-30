@@ -1,5 +1,3 @@
-import e from "express";
-
 export interface UsuarioProyecto {
     id_usuario_proyecto: number;
     id_usuario: string;

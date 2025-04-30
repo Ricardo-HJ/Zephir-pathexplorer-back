@@ -1,7 +1,7 @@
 import { supabase } from "../config/supabase"
 import type { Interes, InteresInput } from "../types/interes"
 
-export class InterestModel {
+export class InteresModel {
   static async create(data: InteresInput): Promise<Interes> {
     const { data: result, error } = await supabase
       .from("intereses")
@@ -13,6 +13,19 @@ export class InterestModel {
     }
 
     return result[0] as Interes
+  }
+
+  static async findById(id: number): Promise<Interes[]> {
+    const { data, error } = await supabase
+      .from("intereses")
+      .select("*")
+      .eq("id", id)
+
+    if (error) {
+      throw new Error(`Error encontrando interés con ese id: ${error.message}`)
+    }
+
+    return data as Interes[]
   }
 
   static async findByUser(idUsuario: string): Promise<Interes[]> {
@@ -35,4 +48,6 @@ export class InterestModel {
       throw new Error(`Error eliminando interés: ${error.message}`)
     }
   }
+
+
 }

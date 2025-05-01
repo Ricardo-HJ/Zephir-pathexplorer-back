@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase";
-import type { CursoSkill, CursoSkillInput } from "../types/curso_skill";
+import { supabase } from "../../config/supabase";
+import type { CursoSkill, CursoSkillInput } from "../../types/curso_skill";
 
 export class CursoSkillModel {
     static async create(data: CursoSkillInput): Promise<CursoSkill> {

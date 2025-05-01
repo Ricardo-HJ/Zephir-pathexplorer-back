@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase";
-import type { UsuarioCurso, UsuarioCursoInput } from "../types/usuario_cursos";
+import { supabase } from "../../config/supabase";
+import type { UsuarioCurso, UsuarioCursoInput } from "../../types/usuario_cursos";
 
 export class UsuarioCursoModel {
     static async create(data: UsuarioCursoInput): Promise<UsuarioCurso> {

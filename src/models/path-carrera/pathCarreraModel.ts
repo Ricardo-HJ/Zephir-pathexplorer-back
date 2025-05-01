@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase";
-import type { PathCarrera, PathCarreraInput } from "../types/path_carrera";
+import { supabase } from "../../config/supabase";
+import type { PathCarrera, PathCarreraInput } from "../../types/path_carrera";
 
 export class PathCarreraModel {
     static async create(data: PathCarreraInput): Promise<PathCarrera> {

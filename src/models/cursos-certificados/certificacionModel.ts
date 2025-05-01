@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase"
-import type { Certificado, CertificadoInput } from "../types/certificacion"
+import { supabase } from "../../config/supabase"
+import type { Certificado, CertificadoInput } from "../../types/certificacion"
 
 export class CertificacionModel {
   static async create(data: CertificadoInput): Promise<Certificado> {

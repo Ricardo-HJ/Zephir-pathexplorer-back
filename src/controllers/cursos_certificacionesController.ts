@@ -1,6 +1,5 @@
 import type { Request, Response } from "express"
 import jwt from "jsonwebtoken"
-import { UserModel } from "../models/userModels"
 import { UsuarioEducacionService } from "../services/usuarioEducacionService"
 import { UsuarioCursoModel } from "../models/cursos-certificados/usuarioCursoModel"
 import { CertificacionModel } from "../models/cursos-certificados/certificacionModel"

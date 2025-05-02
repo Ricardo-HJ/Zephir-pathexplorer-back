@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase";
-import type { StackTecnologico, StackTecnologicoInput } from "../types/stack_tecnologico";
+import { supabase } from "../../config/supabase";
+import type { StackTecnologico, StackTecnologicoInput } from "../../types/stack_tecnologico";
 
 export class StackTecnologicoModel {
     static async create(data: StackTecnologicoInput): Promise<StackTecnologico> {
@@ -28,7 +28,7 @@ export class StackTecnologicoModel {
         return data as StackTecnologico[];
     }
 
-    static async findByUserProject(idUsuarioProyecto: string): Promise<StackTecnologico[]> {
+    static async findByUserProject(idUsuarioProyecto: number): Promise<StackTecnologico[]> {
         const { data, error } = await supabase
             .from("stack_tecnologico")
             .select("*")

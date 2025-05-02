@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase";
-import type { UsuarioProyecto, UsuarioProyectoInput } from "../types/usuario_proyecto";
+import { supabase } from "../../config/supabase";
+import type { UsuarioProyecto, UsuarioProyectoInput } from "../../types/usuario_proyecto";
 
 export class UsuarioProyectoModel {
     static async create(data: UsuarioProyectoInput): Promise<UsuarioProyecto> {
@@ -40,6 +40,7 @@ export class UsuarioProyectoModel {
 
         return data as UsuarioProyecto[];
     }
+
 
     static async findByProyecto(idProyecto: number): Promise<UsuarioProyecto[]> {
         const { data, error } = await supabase

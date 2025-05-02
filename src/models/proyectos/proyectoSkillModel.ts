@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase";
-import type { ProyectoSkill, ProyectoSkillInput } from "../types/proyecto_skill";
+import { supabase } from "../../config/supabase";
+import type { ProyectoSkill, ProyectoSkillInput } from "../../types/proyecto_skill";
 
 export class ProyectoSkillModel {
     static async create(data: ProyectoSkillInput): Promise<ProyectoSkill> {
@@ -53,6 +53,7 @@ export class ProyectoSkillModel {
 
         return data as ProyectoSkill[];
     }
+    
 
     static async delete(id: number): Promise<void> {
         const { error } = await supabase.from("proyecto_skill").delete().eq("id_proyecto_skill", id);

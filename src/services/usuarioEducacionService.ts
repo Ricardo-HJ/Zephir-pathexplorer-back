@@ -1,4 +1,4 @@
-// services/UsuarioEducacionService.ts
+//servicio para obtener la educacion de un usuario
 
 import { UsuarioCursoModel } from "../models/cursos-certificados/usuarioCursoModel";
 import { CursoModel } from "../models/cursos-certificados/cursoModel";
@@ -48,8 +48,7 @@ export class UsuarioEducacionService {
     return certificaciones;
   }
 
-
-
+  // falta implementar la logica para usuario_cursos
 }
 
 

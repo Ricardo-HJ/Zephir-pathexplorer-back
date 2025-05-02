@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase";
-import type { Rol, RolInput } from "../types/rol";
+import { supabase } from "../../config/supabase";
+import type { Rol, RolInput } from "../../types/rol";
 
 export class RolModel {
     static async create(data: RolInput): Promise<Rol> {

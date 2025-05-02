@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase"
-import type { Objetivo, ObjetivoInput } from "../types/objetivo"
+import { supabase } from "../../config/supabase"
+import type { Objetivo, ObjetivoInput } from "../../types/objetivo"
 
 export class ObjetivoModel {
     static async create(data: ObjetivoInput): Promise<Objetivo> {

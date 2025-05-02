@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase"
-import type { Prioridad, PrioridadInput } from "../types/prioridad"
+import { supabase } from "../../config/supabase"
+import type { Prioridad, PrioridadInput } from "../../types/prioridad"
 
 export class PrioridadModel {
     static async create(data: PrioridadInput): Promise<Prioridad> {

@@ -3,6 +3,9 @@ import cors from "cors"
 import dotenv from "dotenv"
 import userRoutes from "./routes/userRoutes"
 import testRoutes from "./routes/testRoutes"
+import pathRoutes from "./routes/pathCarreraRoutes"
+import proyectosRoutes from "./routes/proyectosRoutes"
+import userEducationRoutes from "./routes/userEducationRoutes"
 import { version } from "os"
 
 dotenv.config()
@@ -47,7 +50,10 @@ app.use((req, res, next) => {
 
 // Register routes
 app.use("/api/users", userRoutes)
-app.use("/api/test", testRoutes) // Make sure this line is present
+app.use("/api/path", pathRoutes)
+app.use("/api/proyectos", proyectosRoutes)
+app.use("/api/educacion", userEducationRoutes)
+app.use("/api/test", testRoutes)
 
 // Health check route
 app.get("/health", (req, res) => {

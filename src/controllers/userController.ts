@@ -66,11 +66,15 @@ export const loginUser = async (req: Request, res: Response) => {
 
     // Generate JWT token
     const token = jwt.sign(
-      { idUsuario: user.id_usuario, correo: user.correo, tipoUsuario: user.id_tipo_usuario },
+      { 
+        id_usuario: user.id_usuario,
+        correo: user.correo, 
+        tipoUsuario: user.id_tipo_usuario 
+      },
       process.env.JWT_SECRET as string,
-      { expiresIn: "24h" },
+      { expiresIn: "24h" }
     )
-
+    
     // Remove password from response
     const { contraseña: _, ...userWithoutPassword } = user
 
